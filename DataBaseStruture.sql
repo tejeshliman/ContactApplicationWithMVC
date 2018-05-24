@@ -1,0 +1,26 @@
+USE [ContactDB]
+GO
+
+/****** Object:  Table [dbo].[Contact]    Script Date: 5/24/2018 6:08:36 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Contact](
+	[ID]			[INT] IDENTITY(1,1) NOT NULL,
+	[FirstName]		[NVARCHAR](50)		NOT NULL,
+	[LastName]		[NVARCHAR](50)		NOT NULL,
+	[PrimaryEmail]	[NVARCHAR](100)		NOT NULL,
+	[PhoneNumber]	[NVARCHAR](13)		NOT NULL,
+	[IsActive]		[BIT]				NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
